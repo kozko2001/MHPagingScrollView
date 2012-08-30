@@ -16,6 +16,10 @@
 		7B5F044E136302F3006782F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5F043F136302F3006782F8 /* main.m */; };
 		7B94AC4C136BF9900079ECCB /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B94AC4B136BF9900079ECCB /* PageView.m */; };
 		7BC2ED65136C3A4100A9D610 /* MHPagingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC2ED64136C3A4100A9D610 /* MHPagingScrollView.m */; };
+		F0B0B30815EFF1FC002F46CB /* PageViewCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B0B30715EFF1FC002F46CB /* PageViewCustomView.m */; };
+		F0B0B30A15EFF2C1002F46CB /* PageViewCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B0B30915EFF2C1002F46CB /* PageViewCustomView.xib */; };
+		F0B0B30C15EFF7FE002F46CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B0B30B15EFF7FE002F46CB /* QuartzCore.framework */; };
+		F0B0B30F15F00460002F46CB /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0B0B30E15F00460002F46CB /* MainWindow-iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,11 @@
 		7B94AC4B136BF9900079ECCB /* PageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageView.m; sourceTree = "<group>"; };
 		7BC2ED63136C3A4100A9D610 /* MHPagingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHPagingScrollView.h; sourceTree = "<group>"; };
 		7BC2ED64136C3A4100A9D610 /* MHPagingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHPagingScrollView.m; sourceTree = "<group>"; };
+		F0B0B30615EFF1FC002F46CB /* PageViewCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewCustomView.h; sourceTree = "<group>"; };
+		F0B0B30715EFF1FC002F46CB /* PageViewCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewCustomView.m; sourceTree = "<group>"; };
+		F0B0B30915EFF2C1002F46CB /* PageViewCustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageViewCustomView.xib; sourceTree = "<group>"; };
+		F0B0B30B15EFF7FE002F46CB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F0B0B30E15F00460002F46CB /* MainWindow-iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "MainWindow-iPad.xib"; path = "Resources/iPad/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0B0B30C15EFF7FE002F46CB /* QuartzCore.framework in Frameworks */,
 				7B0F4C981363017C00DE4938 /* UIKit.framework in Frameworks */,
 				7B0F4C9A1363017C00DE4938 /* Foundation.framework in Frameworks */,
 				7B0F4C9C1363017C00DE4938 /* CoreGraphics.framework in Frameworks */,
@@ -54,8 +64,10 @@
 		7B0F4C881363017C00DE4938 = {
 			isa = PBXGroup;
 			children = (
+				F0B0B30B15EFF7FE002F46CB /* QuartzCore.framework */,
 				7B5F043A136302F3006782F8 /* Sources */,
 				7B5F0437136302F3006782F8 /* Resources */,
+				F0B0B30D15F0045F002F46CB /* iPad */,
 				7B0F4C961363017C00DE4938 /* Frameworks */,
 				7B0F4C941363017C00DE4938 /* Products */,
 			);
@@ -101,8 +113,19 @@
 				7B94AC4B136BF9900079ECCB /* PageView.m */,
 				7BC2ED63136C3A4100A9D610 /* MHPagingScrollView.h */,
 				7BC2ED64136C3A4100A9D610 /* MHPagingScrollView.m */,
+				F0B0B30615EFF1FC002F46CB /* PageViewCustomView.h */,
+				F0B0B30715EFF1FC002F46CB /* PageViewCustomView.m */,
+				F0B0B30915EFF2C1002F46CB /* PageViewCustomView.xib */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		F0B0B30D15F0045F002F46CB /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				F0B0B30E15F00460002F46CB /* MainWindow-iPad.xib */,
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +180,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B5F044B136302F3006782F8 /* MainWindow.xib in Resources */,
+				F0B0B30A15EFF2C1002F46CB /* PageViewCustomView.xib in Resources */,
+				F0B0B30F15F00460002F46CB /* MainWindow-iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +197,7 @@
 				7B5F044E136302F3006782F8 /* main.m in Sources */,
 				7B94AC4C136BF9900079ECCB /* PageView.m in Sources */,
 				7BC2ED65136C3A4100A9D610 /* MHPagingScrollView.m in Sources */,
+				F0B0B30815EFF1FC002F46CB /* PageViewCustomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,9 +243,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Sources/Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = "-Wall";
 				WRAPPER_EXTENSION = app;
 			};
@@ -233,9 +260,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Sources/Prefix.pch;
 				INFOPLIST_FILE = Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WARNING_CFLAGS = "-Wall";
 				WRAPPER_EXTENSION = app;

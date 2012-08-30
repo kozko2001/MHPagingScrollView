@@ -39,7 +39,7 @@
 
 	self.pagingEnabled = YES;
 	self.showsVerticalScrollIndicator = NO;
-	self.showsHorizontalScrollIndicator = NO;
+	self.showsHorizontalScrollIndicator = YES;
 	self.contentOffset = CGPointZero;
 }
 

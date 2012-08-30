@@ -1,6 +1,7 @@
 
 #import "AppViewController.h"
-#import "PageView.h"
+#import "PageViewCustomView.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation AppViewController
 
@@ -12,7 +13,7 @@
 
 	numPages = 2;
 
-	pagingScrollView.previewInsets = UIEdgeInsetsMake(0, 50, 0, 50);
+	pagingScrollView.previewInsets = UIEdgeInsetsMake(0, 0, 0, 0);
 	[pagingScrollView reloadPages];
 
 	pageControl.currentPage = 0;
@@ -93,11 +94,15 @@
 
 - (UIView *)pagingScrollView:(MHPagingScrollView *)thePagingScrollView pageForIndex:(NSInteger)index
 {
-	PageView *pageView = (PageView *)[thePagingScrollView dequeueReusablePage];
+	PageViewCustomView *pageView = (PageViewCustomView *)[thePagingScrollView dequeueReusablePage];
 	if (pageView == nil)
-		pageView = [[[PageView alloc] init] autorelease];
+    {
+        NSArray *topLevel = [[NSBundle mainBundle] loadNibNamed: @"PageViewCustomView" owner:nil options:nil];
+        pageView = [topLevel objectAtIndex: 0];
+        int b = 2;
+    }
 
-	[pageView setPageIndex:index];
+    pageView.titleLabel.text = [NSString stringWithFormat:@"%i", index] ;
 	return pageView;
 }
 
